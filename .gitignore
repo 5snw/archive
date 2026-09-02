@@ -1,0 +1,8 @@
+.validation/
+node_modules/
+tmp/
+*.log
+Thumbs.db
+.DS_Store
+data/
+dist/

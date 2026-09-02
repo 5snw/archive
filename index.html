@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>stash.</title>
+<meta name="description" content="meu arquivo pessoal de projetos, testes e coisas que ainda estou fazendo" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="stash." />
+<meta property="og:description" content="meu arquivo pessoal de projetos, testes e coisas que ainda estou fazendo" />
+<meta property="og:url" content="https://snowstash.dev/" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="stash." />
+<meta name="twitter:description" content="meu arquivo pessoal de projetos, testes e coisas que ainda estou fazendo" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial' font-size='20' font-style='italic' text-anchor='middle' fill='%23000'%3Es%3C/text%3E%3C/svg%3E" />
+<link rel="preload" href="assets/fonts/Helvetica.woff" as="font" type="font/woff" crossorigin />
+<link rel="preload" href="assets/fonts/VCR.woff" as="font" type="font/woff" crossorigin />
+<link rel="preload" href="assets/3d/macbook_pro_m3_16_inch_2024.glb" as="fetch" type="model/gltf-binary" crossorigin />
+<link rel="preload" href="assets/posters/vertexaodds.png" as="image" />
+<link rel="stylesheet" href="styles/snow.css?v=mobile-28" />
+<link rel="stylesheet" href="styles/spotify-player.css?v=7" />
+<link rel="stylesheet" href="assets/build/menu.css?v=hover-states-4" />
+</head>
+<body class="is-booting is-invert has-page-transition">
+
+<div class="backdrop" aria-hidden="true"></div>
+<div class="site-cursor" id="siteCursor" aria-hidden="true">
+  <svg viewBox="0 0 19 27"><path d="M0 0v22l5-5 5 10 4-2-5-10h10Z" /></svg>
+</div>
+<div id="kinetic-navigation-root"></div>
+
+<div id="boot" class="boot" role="status" aria-label="Loading Snow portfolio">
+  <img src="assets/artwork/snow-mark.png" alt="#SNOW" class="boot__img" />
+  <div class="boot__bar"><span id="bootFill"></span></div>
+  <div class="boot__pct" id="bootPct">000</div>
+  <p class="boot__sound-note">ao clicar no site, a música começa</p>
+</div>
+
+<div class="ctl">
+  <button class="ctl__b" id="invertToggle" type="button" aria-pressed="true">invert</button>
+  <button class="ctl__b" id="soundToggle" type="button" aria-pressed="false">music on</button>
+</div>
+<audio id="bgAudio" src="/api/music/aonde-mais" preload="metadata" playsinline data-start="54" data-end="131"></audio>
+
+<main id="top">
+
+<section class="sec sec--dark hero" id="hero">
+  <div class="stage" data-rise>
+    <img src="assets/artwork/star-a.png" alt="" class="el el--star-a" aria-hidden="true" />
+    <img src="assets/artwork/star-b.png" alt="" class="el el--star-b" aria-hidden="true" />
+    <div id="hero-proximity-root" class="hero-proximity-mount"></div>
+    <div class="lay lay--brand magnetic-heading-root" id="magnetic-stash-root"></div>
+  </div>
+</section>
+
+<section class="sec sec--dark showcase" id="work">
+  <header class="showcase__archive" aria-label="Project archive">
+    <div class="archive__head">
+      <p><strong>archive</strong></p>
+      <span>four entries</span>
+    </div>
+    <ol class="archive__list">
+      <li>
+        <a class="archive__entry" href="projects/vertexa-odds">
+          <span class="archive__index"><i>01</i>archive_01</span>
+          <span class="archive__copy"><strong>vertexa odds</strong><small>arbitrage and bankroll management</small></span>
+          <time class="archive__year" datetime="2026">2026</time>
+          <span class="archive__status is-live">live</span>
+          <b aria-hidden="true">&#8594;</b>
+        </a>
+      </li>
+      <li>
+        <a class="archive__entry" href="projects/ggmax">
+          <span class="archive__index"><i>02</i>archive_02</span>
+          <span class="archive__copy"><strong>ggmax</strong><small>digital marketplace profile</small></span>
+          <time class="archive__year" datetime="2023">2023</time>
+          <span class="archive__status is-live">live</span>
+          <b aria-hidden="true">&#8594;</b>
+        </a>
+      </li>
+      <li>
+        <a class="archive__entry" href="projects/pendly">
+          <span class="archive__index"><i>03</i>archive_03</span>
+          <span class="archive__copy"><strong>pendly</strong><small>reminder features integrated into Vertexa Odds</small></span>
+          <time class="archive__year" datetime="2025">2025</time>
+          <span class="archive__status">archived</span>
+          <b aria-hidden="true">&#8594;</b>
+        </a>
+      </li>
+      <li>
+        <a class="archive__entry" href="projects/staytrackd">
+          <span class="archive__index"><i>04</i>archive_04</span>
+          <span class="archive__copy"><strong>staytrackd</strong><small>em desenvolvimento.</small></span>
+          <time class="archive__year" datetime="2026">2026</time>
+          <span class="archive__status is-progress">em desenvolvimento.</span>
+          <b aria-hidden="true">&#8594;</b>
+        </a>
+      </li>
+    </ol>
+  </header>
+  <div class="showcase__flower-stage" aria-label="Halftone birds background">
+    <div class="showcase__line-art" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+        <path d="M75 735 C235 452 470 365 748 468 S1240 735 1532 190" />
+        <path d="M142 797 C312 540 555 430 834 520 S1265 690 1510 360" />
+        <path d="M210 748 C345 646 512 607 682 632 S1045 756 1390 612" />
+      </svg>
+    </div>
+    <img src="assets/artwork/birds-horizontal.png" alt="" class="el el--birds" />
+  </div>
+  <div class="showcase__console">
+    <p class="showcase__hint"><span aria-hidden="true">↓</span> interactive MacBook / drag or use the arrows</p>
+    <div class="showcase__stage">
+      <canvas id="portfolioCanvas" aria-label="Interactive project archive"></canvas>
+      <div class="showcase__loading" id="consoleLoading"><i class="spin" aria-hidden="true"></i></div>
+      <button class="showcase__lid-control" id="lidToggle" type="button" aria-label="Close MacBook lid" aria-pressed="false" disabled>close lid [L]</button>
+    </div>
+    <div class="rail" id="rail" aria-live="polite">
+      <b id="railIdx">01</b><i id="railTot">/04</i>
+      <a class="rail__open" id="railOpen" href="projects/vertexa-odds" target="_blank" rel="noopener" aria-label="Open selected archive file">↗</a>
+    </div>
+    <div class="keys" aria-label="Project controls">
+      <button id="prevProject" type="button" aria-label="Previous project">←</button>
+      <button id="nextProject" type="button" aria-label="Next project">→</button>
+      <button id="openProject" type="button" aria-label="Open selected project">↗</button>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark about" id="about">
+  <div class="stage">
+    <img src="assets/artwork/about-flower-left.png" alt="" class="el el--disc-a" aria-hidden="true" />
+    <img src="assets/artwork/about-flower-right.png" alt="" class="el el--disc-b" aria-hidden="true" />
+    <div class="lay lay--abouth magnetic-heading-root" id="magnetic-about-root"></div>
+    <div class="lay lay--bio">
+      <p>meus projetos quase sempre começam resolvendo algum problema meu.</p>
+      <p>falta uma ferramenta, eu faço pra mim, e em algum momento aquilo deixa de ser uma gambiarra pessoal e vira um site que outras pessoas usam.</p>
+      <p>o sistema de lembretes pendly foi assim, montei ele pra organizar minhas tarefas, lembretes e tentar colocar um pouco de ordem na minha bagunça. hoje ele não existe mais como projeto separado, acabou virando uma funcionalidade dentro do vertexa odds.</p>
+      <p>o vertexa odds é um site de arbitragem esportiva. ele busca as melhores odds entre as casas, encontra surebets, organiza freebets e promoções, e mantém a banca sob controle.</p>
+      <p>ultimamente tenho trabalhado mais no vertexa odds e no staytrackd</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark contact" id="contact">
+  <div class="stage">
+    <div class="lay lay--contact magnetic-heading-root" id="magnetic-contact-root"></div>
+    <div class="el el--contact-art" aria-hidden="true">
+      <img src="assets/artwork/contact-cat-original.png" alt="" class="contact-art-image" />
+    </div>
+    <nav class="lay lay--socials" aria-label="Stash links">
+      <a href="#" data-contact="email" hidden>email · bysnow709@gmail.com ↗</a>
+      <a href="#" data-contact="github" target="_blank" rel="noopener" hidden>github · 5snw ↗</a>
+      <button type="button" data-contact="discord" hidden>discord · 5snw</button>
+    </nav>
+    <p class="lay lay--visitors" id="visitorCount" role="status" aria-live="polite">
+      <svg class="visitor-eye" viewBox="0 0 24 16" aria-hidden="true">
+        <path d="M1 8s4-7 11-7 11 7 11 7-4 7-11 7S1 8 1 8Z" />
+        <circle cx="12" cy="8" r="3" />
+      </svg>
+      <span>visitors · <b id="visitorNumber">…</b></span>
+    </p>
+    <img class="rabbit-still" src="assets/artwork/rabbits-running.png" alt="Quatro coelhos correndo" />
+    <p class="lay lay--contact-note" id="contactStatus">links coming soon.</p>
+  </div>
+</section>
+
+</main>
+
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"
+} }
+</script>
+<script src="scripts/site-config.js"></script>
+<script src="scripts/projects.js?v=mac-desktop-2"></script>
+<script src="scripts/artwork-contours.js?v=exact-flowers-5"></script>
+<script src="scripts/site.js?v=music-segment-9"></script>
+<script src="scripts/spotify-player.js?v=6"></script>
+<script src="scripts/tracking-overlay.js?v=parallax-sync-1"></script>
+<script type="module" src="scripts/portfolio-console.js?v=screen-nav-27"></script>
+<script type="module" src="assets/build/menu.js?v=mobile-5"></script>
+</body>
+</html>
